@@ -1,2 +1,194 @@
-# cabins-yall
-A look at the development of land in cabin rental areas in the Red River Gorge.
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Presentation</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet" />
+  <style>
+    /* Set margin/padding to fit border in box model */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Define styles on body (and all descendants) */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Serrif";
+      font-weight: 400;
+      color: rgb(32, 32, 32);
+      background-color: rgb(236, 232, 228);
+    }
+
+    /* Define styles for the headings */
+    h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin: 10px 0;
+      padding: 0;
+      color: rgb(0, 0, 0);
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    /* Define styles for the paragraph */
+    p {
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin: 0 0 10px 0;
+      padding: 0;
+    }
+
+    a:link,
+    a:visited {
+      color: rgb(12, 73, 34);
+    }
+
+    a:hover {
+      color: rgb(86, 86, 86);
+      text-decoration: none;
+    }
+
+    section {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    footer {
+      width: 80%;
+      margin: 0 auto;
+      color: rgb(100, 100, 100);
+    }
+
+    iframe {
+      border: 1px solid rgb(200, 200, 200);
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .caption {
+      font-size: 0.8rem;
+      font-weight: 400;
+      font-style: italic;
+      margin: 0;
+      padding: 0;
+      color: rgb(100, 100, 100);
+    }
+
+    .title {
+      text-align: left;
+      margin: 20px;
+    }
+
+    /* Set up a container for the two columns */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    /* Define styles for the left column */
+    .left-column {
+      flex-basis: 40%;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    /* Define styles for the right column */
+    .right-column {
+      flex-basis: 55%;
+      background-color: rgba(255, 255, 255, 0.35);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    /* Round image corners for images inside the right-column */
+    .right-column img {
+      border-radius: 10px;
+    }
+
+    /* Media query for small screens */
+    /* For screens up to 768px, apply these rules. */
+    @media (max-width: 768px) {
+
+      /* Change to a single column layout */
+      .container {
+        flex-direction: column;
+      }
+
+      /* Set full width for both columns */
+      .left-column,
+      .right-column {
+        flex-basis: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <!-- 💡💡💡 Cesium map: paste embed code below -->
+    <iframe title="Development in the Red River Gorge" width="100%" height="576" src="https://ion.cesium.com/stories/viewer/?id=77d03f73-55b9-46b0-a9bf-a4df41444f93" frameborder="0" allow="fullscreen" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    </iframe>
+    <!-- 💡💡💡 Cesium map: paste embed code above -->
+    <p class="caption">Cabins built between 2004 and 2023</p>
+    <div class="title">
+      <h1>Cabins on the Rise</h1>
+      <h2>A look at the development of Rental Cabins in the Red River Gorge.</h2>
+    </div>
+    <div class="container">
+      <div class="left-column">
+        <h3>Why the Red?</h3>
+        <p>
+          The Red River Gorge is a geological area in Eastern Kentucky that hosts a plethora of outdoor recreation and has seen a major boom in tourism over the last two decades. Many people want to marvel at the rock formations and enjoy the scenic views, but some seek to profit off of the increased traffic and subseuent rental cabin craze. Developers small and large are flocking to the Red to grab their slice of the pie, and we are going to look at the change this phenomenon has wrought. 
+        </p>
+        <p>
+          This project is inteded to depict the proliferation of Cabins in the Red River Gorge over the last 20 years by studying lidar data and changes in land cover type. We will be able to see which areas have been developed the most and how they have changed. 
+        </p>
+        <p>
+          Visualizations created from lidar data provided by
+          <a href="https://kyfromabove.ky.gov/">KyFromAbove</a> in ArcGIS Pro, Cesium Ion and Blender. Additional sources of information from
+          <a href="https://usgs.gov/">USGS</a>, April, 2024
+          <a href="https://transportation.ky.gov/Pages/Home.aspx">KYTC</a>, April 2024.
+        </p>
+        <p>
+          Page and visualizations created by Nick Gray for GEO 409, Department of
+          Geography, University of Kentucky. Spring 2024.
+        </p>
+      </div>
+      <div class="right-column">
+        <h3>Vizualizations </h3>
+        <img src="cliffview_change.jpg" alt="Something about this map" width="100%" />
+        <p class="caption">Map of Cliffview Resort Removal of Trees for Cabins</p>
+        <img src="dev_aoi.jpg" alt="Something about this map" width="100%" />
+        <p class="caption">Map of the areas of interest within the larger area of the Red River Gorge. We looked at 2 of the areas with the highest amount of residential development within the Gorge.</p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <hr />
+    <img src="logo-color-400px.png" alt="UKy Arts and Sciences" width="400px">
+
+  </footer>
+</body>
+
+</html>
